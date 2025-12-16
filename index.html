@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do app</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: rgb(178, 202, 223);
+            text-align: center;
+            padding: 2px 0;
+            height: 40px;
+        }
+
+        main {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        input {
+            border: 1px solid black;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        #todolist {
+            margin-top: 15px;
+            padding-left: 4px;
+            width: 300px;
+            height: 400px;
+            box-shadow: 0 0 8px rgb(10, 10, 10);
+            text-align: left;
+        }
+
+        #showlist {
+            overflow: auto;
+            height: 350px;
+            width: 280px;
+            margin-top: 10px;
+        }
+
+        .work {
+            display: flex;
+            justify-content: space-between;
+            margin: 3px;
+        }
+
+        button {
+            border: none;
+            background-color: white;
+            box-shadow: 0 0 2px black;
+            padding: 1px 5px;
+            border-radius: 2px;
+        }
+
+        .poip {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <p>To-Do app</p>
+        </header>
+
+        <main>
+            <form id="form">
+                <input type="text" placeholder="enter what you want to do.." id="usertodo">
+                <button type="submit">Add</button>
+            </form>
+
+            <div id="todolist">
+                <div class="poip">
+                    <p>Works to do</p>
+                    <div>
+                        <button id="alldone">All done</button>
+                        <button id="reset">clear</button>
+                    </div>
+                </div>
+
+                <div id="showlist"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./todo.js"></script>
+</body>
+</html>
