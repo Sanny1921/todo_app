@@ -19,6 +19,7 @@ form.addEventListener('submit', function (e) {
 
     let sp = document.createElement('span');
     sp.textContent = "  " + todo.value.trim() + "       ";
+    sp.className="kaam";
 
     let checkk = document.createElement('input');
     checkk.type = "checkbox";
@@ -52,8 +53,8 @@ form.addEventListener('submit', function (e) {
         console.log('pop');
         add.removeChild(lst);
 
-        let eodo = document.querySelectorAll('.todowork');
-        let ok = document.querySelectorAll('.checkked');
+        // let eodo = document.querySelectorAll('.todowork');
+        // let ok = document.querySelectorAll('.checkked');
     });
 
     let okwork = document.querySelectorAll('.work');
@@ -91,7 +92,7 @@ let alldone = document.getElementById('alldone');
 alldone.addEventListener('click', function (e) {
     e.preventDefault();
 
-    let eodo = document.querySelectorAll('.todowork');
+    let eodo = document.querySelectorAll('.kaam');
     let ok = document.querySelectorAll('.checkked');
 
     if (alldone.id == "alldone") {
@@ -164,3 +165,4 @@ function loadTodos() {
 document.getElementById('showlist').addEventListener('click', saveTodos);
 document.getElementById('reset').addEventListener('click', saveTodos);
 window.addEventListener('load', loadTodos);
+
